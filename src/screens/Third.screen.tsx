@@ -1,10 +1,9 @@
 import { useNavigation } from "@react-navigation/native";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Text, View , Button } from "react-native";
 
 const Third = () => {
 
-    const { popToTop } = useNavigation<{popToTop:() => void}>();
+    const { popToTop , navigate } = useNavigation<{popToTop:() => void,navigate:(route:string,args:any) => void}>();
 
     return (
         <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
@@ -12,6 +11,10 @@ const Third = () => {
             <Button
                 title='Second'
                 onPress={() => popToTop() }
+            />
+            <Button
+                title='User'
+                onPress={() => navigate('User',{id:1,nombre:'Perupillo'}) }
             />
         </View>
     )
