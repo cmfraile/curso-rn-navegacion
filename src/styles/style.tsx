@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
+const stylesFirstAndDirt = StyleSheet.create({
     title:{
         fontSize:15,fontWeight:'700',textAlign:'center'
     },
@@ -15,4 +15,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default styles ;
+export default stylesFirstAndDirt ;

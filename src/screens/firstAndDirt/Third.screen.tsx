@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import { Text, View , Button , TouchableOpacity , ImageBackground } from "react-native";
-import styles from "../styles/style";
+import styles from "../../styles/style";
 
 /*<Button title='Second' onPress={ () => popToTop() }/>*/
 /*<Button title='User' onPress={() => navigate('User',{id:1,nombre:'Perupillo'}) } />*/
@@ -13,7 +13,7 @@ const Third = () => {
         <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
             
             <TouchableOpacity style={styles.button} onPress={() => navigate('User',{id:1,nombre:'Perupillo'}) } >
-                <ImageBackground source={require('../assets/j1.jpg')} resizeMode="cover" style={styles.backgroundImage} />
+                <ImageBackground source={require('../../assets/j1.jpg')} resizeMode="cover" style={styles.backgroundImage} />
                 <Text>Jonathan</Text>
             </TouchableOpacity>
 

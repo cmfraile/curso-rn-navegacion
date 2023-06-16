@@ -1,8 +1,8 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Text, View } from "react-native";
-import { RootStackParams } from "../App";
+import { RootStackParamsFirstAndDirt } from "../../routes/FirstAndDirtRoute";
 
-interface userProps extends NativeStackScreenProps<RootStackParams,'User'>{};
+interface userProps extends NativeStackScreenProps<RootStackParamsFirstAndDirt,'User'>{};
 interface myRouterParams { id:number , nombre:string }
 const User = ({route:{params}}:userProps) => {
 
