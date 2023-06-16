@@ -13,10 +13,13 @@ const Stack = createNativeStackNavigator()
 const App = () => 
     <NavigationContainer>
       <Stack.Navigator 
-        initialRouteName='Home'
-        screenOptions={{headerShown:false}}
+        initialRouteName='Main'
+        screenOptions={{
+          headerShown:false,
+          animation:'none'
+        }}
       >
-          <Stack.Screen name='Home' component={Main}/>
+          <Stack.Screen name='Main' component={Main}/>
           <Stack.Screen name='Second' component={Second}/>
           <Stack.Screen name='Third' component={Third}/>
       </Stack.Navigator>
