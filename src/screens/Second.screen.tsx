@@ -1,6 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import { useEffect } from "react";
 import { Text, View , Button } from "react-native";
+import styles from "../styles/style";
 
 const Second = () => {
 

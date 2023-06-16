@@ -7,7 +7,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import styles from './styles/style';
 
-const Stack = createNativeStackNavigator()
+export type RootStackParams = {
+  Main : undefined
+  Second: undefined
+  Third: undefined
+  User: { id:number , nombre:string }
+}
+
+const Stack = createNativeStackNavigator<RootStackParams>()
 
 //Clase 103 en caso de errores
 
