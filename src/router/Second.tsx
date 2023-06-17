@@ -1,25 +1,29 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import 'react-native-gesture-handler';
-import styles from '../styles/style';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
 
-import Main from '../screens/firstAndDirt/Main.screen';
-import Second from '../screens/firstAndDirt/Second.screen';
-import Third from '../screens/firstAndDirt/Third.screen';
-import User from '../screens/firstAndDirt/User.screen';
+import FirstScreen from "../screens/Second/FirstScreen";
+import SecondScreen from "../screens/Second/SecondScreen";
 
-export type RootStackParamsFirstAndDirt = {
-  Main : undefined
-  Second: undefined
-  Third: undefined
-  User: { id:number , nombre:string }
+export type RootStackParamsSecond = {
+    First : undefined ,
+    Second : undefined
 }
 
-const Stack = createNativeStackNavigator<RootStackParamsFirstAndDirt>()
+const Stack = createNativeStackNavigator<RootStackParamsSecond>();
 
-//Clase 103 en caso de errores
+const SecondRoute = () => 
+    <NavigationContainer>
+        <Stack.Navigator initialRouteName="First">
+            <Stack.Screen name='First' component={FirstScreen}/>
+            <Stack.Screen name='Second' component={SecondScreen}/>
+        </Stack.Navigator>
+    </NavigationContainer>
 
+export default SecondRoute
+
+
+
+/*
 const FirstAndDirt = () => 
     <NavigationContainer>
       <Stack.Navigator 
@@ -37,5 +41,5 @@ const FirstAndDirt = () =>
           <Stack.Screen name='User'   options={{headerTitleStyle:styles.title}} component={User}/>
       </Stack.Navigator>
     </NavigationContainer>
+*/
 
-export default FirstAndDirt
