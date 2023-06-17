@@ -6,12 +6,26 @@ import User from './screens/User.screen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import styles from './styles/style';
+import 'react-native-gesture-handler';
+
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 export type RootStackParams = {
   Main : undefined
   Second: undefined
   Third: undefined
   User: { id:number , nombre:string }
+}
+
+const Drawer = createDrawerNavigator();
+
+const MyDrawer = () => {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen name="Main" component={Main} />
+      <Drawer.Screen name="Second" component={Second} />
+    </Drawer.Navigator>
+  );
 }
 
 const Stack = createNativeStackNavigator<RootStackParams>()
@@ -29,6 +43,7 @@ const App = () =>
           },
         }}
       >
+          <MyDrawer/>
           <Stack.Screen name='Main' options={{title:'titulo de prueba',headerTitleStyle:styles.title}} component={Main}/>
           <Stack.Screen name='Second' options={{headerTitleStyle:styles.title}} component={Second}/>
           <Stack.Screen name='Third'  options={{headerTitleStyle:styles.title}} component={Third}/>
