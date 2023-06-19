@@ -22,6 +22,7 @@ const MyTabs = () => {
         >
             <Tab.Screen name="Lorem" component={Lorem} />
             <Tab.Screen name="Ipsum" component={Ipsum} />
+            <Tab.Screen name="Dolor" component={Dolor} />
         </Tab.Navigator>
   );
 }
