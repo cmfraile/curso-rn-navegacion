@@ -2,8 +2,8 @@ import { Text } from "react-native"
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Lorem from "./Lorem";
 import Ipsum from "./Ipsum";
+import Dolor from "./Tres";
 import { useEffect } from "react";
-import { NavigationContainer } from "@react-navigation/native";
 
 const Tab = createBottomTabNavigator();
 const MyTabs = () => {
