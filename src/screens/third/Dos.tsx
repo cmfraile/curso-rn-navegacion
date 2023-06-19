@@ -1,5 +1,5 @@
 import { Text } from "react-native"
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Lorem from "./Lorem";
 import Ipsum from "./Ipsum";
 import { useEffect } from "react";
