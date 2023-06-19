@@ -1,8 +1,7 @@
-import FirstAndDirt from "./routes/FirstAndDirtRoute"
-import SecondRoutes from "./routes/SecondRoutes"
 
-//Clase 103 en caso de errores
+import FirstAndDirt from "./router/FirstAndDirt";
+import SecondRoute from "./router/Second";
 
-const App = () => <SecondRoutes/>
+const App = () => <SecondRoute/>
 
 export default App

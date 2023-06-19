@@ -2,9 +2,6 @@ import { useNavigation } from "@react-navigation/native";
 import { Text, View , Button , TouchableOpacity , ImageBackground } from "react-native";
 import styles from "../../styles/style";
 
-/*<Button title='Second' onPress={ () => popToTop() }/>*/
-/*<Button title='User' onPress={() => navigate('User',{id:1,nombre:'Perupillo'}) } />*/
-
 const Third = () => {
 
     const { popToTop , navigate } = useNavigation<{popToTop:() => void,navigate:(route:string,args:any) => void}>();
