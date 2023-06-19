@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Lorem from "./Lorem";
 import Ipsum from "./Ipsum";
 import { useEffect } from "react";
+import { NavigationContainer } from "@react-navigation/native";
 
 const Tab = createBottomTabNavigator();
 const MyTabs = () => {
@@ -10,13 +11,16 @@ const MyTabs = () => {
     useEffect(() => console.log('Tab CL'),[])
 
   return (
-    <Tab.Navigator
-        initialRouteName="Lorem"
-        screenOptions={{headerShown:false}}
-    >
-      <Tab.Screen name="Lorem" component={Lorem} />
-      <Tab.Screen name="Ipsum" component={Ipsum} />
-    </Tab.Navigator>
+        <Tab.Navigator
+            initialRouteName="Lorem"
+            screenOptions={{
+                headerShown:false,
+                tabBarStyle:{backgroundColor:'blue'}
+            }}
+        >
+        <Tab.Screen name="Lorem" component={Lorem} />
+        <Tab.Screen name="Ipsum" component={Ipsum} />
+        </Tab.Navigator>
   );
 }
 
