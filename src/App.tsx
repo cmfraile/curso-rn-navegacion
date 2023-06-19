@@ -1,4 +1,4 @@
-import 'react-native-gesture-handler';
+
 import FirstAndDirt from "./router/FirstAndDirt";
 import SecondRoute from "./router/Second";
 
