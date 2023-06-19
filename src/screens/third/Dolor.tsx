@@ -1,12 +1,17 @@
 import { useEffect } from "react";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
+import MyIcons from "../../components/Icon";
 
 const Dolor = () => {
 
     useEffect(() => console.log('Lorem CL'),[])
 
     return(
-        <Text> Dolor FUNCIONA </Text>
+        <View>
+            <MyIcons/>
+            <MyIcons/>
+            <MyIcons/>
+        </View>
     )
 
 }
