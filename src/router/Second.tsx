@@ -6,12 +6,6 @@ import SecondScreen from "../screens/Second/SecondScreen";
 
 import DrawerApp from "../components/Drawer";
 
-export type RootStackParamsSecond = {
-    First : undefined ,
-    Second : undefined
-}
-
-const Stack = createNativeStackNavigator<RootStackParamsSecond>();
 
 const SecondRoute = () => 
     <NavigationContainer>

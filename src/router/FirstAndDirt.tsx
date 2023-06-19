@@ -21,7 +21,7 @@ const Stack = createNativeStackNavigator<RootStackParamsFirstAndDirt>()
 //Clase 103 en caso de errores
 
 const FirstAndDirt = () => 
-    <NavigationContainer>
+    <NavigationContainer independent={true}>
       <Stack.Navigator 
         initialRouteName='Main'
         screenOptions={{

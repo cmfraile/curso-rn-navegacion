@@ -3,9 +3,15 @@ import { DrawerContentComponentProps, DrawerContentScrollView, DrawerItem, creat
 import FirstScreen from '../screens/Second/FirstScreen';
 import SecondScreen from '../screens/Second/SecondScreen';
 import { Image, Text , TouchableOpacity, View } from 'react-native';
+import FirstAndDirt from '../router/FirstAndDirt';
+
+export type RootStackParamsSecond = {
+  First : undefined ,
+  Second : undefined
+}
 
 
-const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator<RootStackParamsSecond>();
 
 const CustomIcon = () => 
   <Image
@@ -46,7 +52,7 @@ const DrawerApp = () => {
       }}
     >
       <Drawer.Screen name="First" component={FirstScreen} />
-      <Drawer.Screen name="Second" component={SecondScreen} />
+      <Drawer.Screen name="Second" component={FirstAndDirt} />
     </Drawer.Navigator>
   );
 }
