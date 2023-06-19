@@ -4,6 +4,7 @@ import FirstScreen from '../screens/Second/FirstScreen';
 import SecondScreen from '../screens/Second/SecondScreen';
 import { Image, Text , TouchableOpacity, View } from 'react-native';
 import FirstAndDirt from '../router/FirstAndDirt';
+import { useWindowDimensions } from 'react-native';
 
 export type RootStackParamsSecond = {
   First : undefined ,
@@ -43,12 +44,15 @@ const InsideDrawer = (props:DrawerContentComponentProps) => {
 }
 
 const DrawerApp = () => {
+
+  const { width } = useWindowDimensions()
+
   return (
     <Drawer.Navigator
       initialRouteName='First'
       drawerContent={ (props) => <InsideDrawer {...props}/> }
       screenOptions={{
-        //drawerType:'permanent'
+        drawerType:(width > 700) ? 'permanent' : 'front'
       }}
     >
       <Drawer.Screen name="First" component={FirstScreen} />

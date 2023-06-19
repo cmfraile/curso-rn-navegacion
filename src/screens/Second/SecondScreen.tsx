@@ -3,7 +3,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context"
 
 const SecondScreen = () => {
 
-    //Este hook tiene las dimensiones para que se vea todo de forma segura, es decir, que nada descuadre.
+    //Este hook tiene las dimensiones para que se vea todo de forma segura, es decir,
     const insets = useSafeAreaInsets()
 
     return(
