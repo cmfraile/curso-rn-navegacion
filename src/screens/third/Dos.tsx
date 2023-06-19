@@ -15,6 +15,7 @@ const MyTabs = () => {
             initialRouteName="Lorem"
             screenOptions={(p1) => ({
                 headerShown:false,
+                headerTintColor:'yellow',
                 tabBarIcon:(p2) => <Text>{p1.route.name}</Text>,
                 tabBarLabel:(p2) => <></>
                 //tabBarStyle:{}
