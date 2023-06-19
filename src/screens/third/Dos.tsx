@@ -13,13 +13,15 @@ const MyTabs = () => {
   return (
         <Tab.Navigator
             initialRouteName="Lorem"
-            screenOptions={{
+            screenOptions={(p1) => ({
                 headerShown:false,
-                tabBarStyle:{backgroundColor:'blue'}
-            }}
+                tabBarIcon:(p2) => <Text>{p1.route.name}</Text>,
+                tabBarLabel:(p2) => <></>
+                //tabBarStyle:{}
+            })}
         >
-        <Tab.Screen name="Lorem" component={Lorem} />
-        <Tab.Screen name="Ipsum" component={Ipsum} />
+            <Tab.Screen name="Lorem" component={Lorem} />
+            <Tab.Screen name="Ipsum" component={Ipsum} />
         </Tab.Navigator>
   );
 }
